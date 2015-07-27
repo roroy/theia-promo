@@ -54,7 +54,9 @@ header a:hover {
   position: absolute;
   top: -50px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .controls label {
@@ -68,7 +70,8 @@ header a:hover {
   opacity: .5;
   color: #fff;
   text-transform: uppercase;
-  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+          transition: opacity .5s;
 }
 
 .controls label:hover,
@@ -87,16 +90,16 @@ header a:hover {
 
 .slider {
 	position: relative;
-	overflow: hidden;
 	margin: auto;
-	width: 500px;
-	min-height: 620px;
+	height: auto;
 }
 
 .slider .img {
 	position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
   opacity: 0;
   z-index: 0;
   -webkit-transition: .3s;
@@ -104,7 +107,10 @@ header a:hover {
 }
 
 .slider img {
-	max-width: none;
+	 max-width: 100%;
+	 display: block;
+   margin-left: auto;
+   margin-right: auto
 }
 
 #slide1:checked ~ .slider .img1,
