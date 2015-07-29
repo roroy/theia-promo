@@ -1,10 +1,11 @@
 body {
-	background: url(/img/bg.jpg) no-repeat;
+	background: url(../img/bg.jpg) no-repeat;
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
 	height: 100%;
 	width: 100%;
+	font-family:'Open Sans', 'Droid Sans', sans-serif;
 }
 
 header {
@@ -20,7 +21,7 @@ header a {
 }
 
 header a:hover {
-	color: #333;
+	color: #F5F5F5;
 	-webkit-transition: .3s;
 	        transition: .3s;
 }
@@ -45,82 +46,69 @@ header a:hover {
 
 .header-links .fa {
 	font-size: 3rem;
+	margin-right: 10px;
 }
 
-.main-promo-slider {
+.header-links .fa.fa-github:hover {
+	color: #000;
+}
+.header-links .fa.fa-android:hover {
+	color: #C6ED2D;
 }
 
-.controls {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+main {
+	margin-bottom: 100px;
 }
 
-.controls label {
-  display: block;
-  float: left;
-  margin-right: 10px;
-  padding:10px;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #000;
-  opacity: .5;
-  color: #fff;
-  text-transform: uppercase;
-  -webkit-transition: opacity .5s;
-          transition: opacity .5s;
+main .container {
+	text-align: center;
 }
 
-.controls label:hover,
-#slide1:checked ~ .controls label:nth-of-type(1),
-#slide2:checked ~ .controls label:nth-of-type(2),
-#slide3:checked ~ .controls label:nth-of-type(3),
-#slide4:checked ~ .controls label:nth-of-type(4),
-#slide5:checked ~ .controls label:nth-of-type(5),
-#slide6:checked ~ .controls label:nth-of-type(6){
-  opacity: .8;
+main .promo-text {
+	margin-top: 30px;
+	border: 1px solid rgba(0,0,0,0.2);
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	text-align: left;
+	background-color: #F5F5F5;
+	color: #333;
+	border-radius: 5px;
 }
 
-.main-promo-slider input[type="radio"] { 
-	display: none 
+.promo-text h2{
+	font-size: 2rem;
 }
 
-.slider {
-	position: relative;
-	margin: auto;
-	height: auto;
+.promo-text p {
+	font-size: 1.2rem;
 }
 
-.slider .img {
+.promo-text p a {
+	color: #08C;
+	margin-right: 13px;
+}
+.promo-text p a:after{
+	content: '';
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: inherit;
+	color: inherit;
+	padding-left: 6px;
 	position: absolute;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	    -ms-transform: translateX(-50%);
-	        transform: translateX(-50%);
-  opacity: 0;
-  z-index: 0;
-  -webkit-transition: .3s;
-	      transition: .3s;
+	margin-top: 0.20em;
+	-webkit-transition: padding 0.15s ease-in-out;
+	-o-transition: padding 0.15s ease-in-out;
+	transition: padding 0.15s ease-in-out;
 }
 
-.slider img {
-	 max-width: 100%;
-	 display: block;
-   margin-left: auto;
-   margin-right: auto
-}
+.promo-text p a:hover:after{
+	padding-left: 10px;
+	}
 
-#slide1:checked ~ .slider .img1,
-#slide2:checked ~ .slider .img2,
-#slide3:checked ~ .slider .img3,
-#slide4:checked ~ .slider .img4,
-#slide5:checked ~ .slider .img5,
-#slide6:checked ~ .slider .img6 {
-  opacity: 1;
-  z-index: 1;
-  -webkit-transition: .3s;
-	      transition: .3s;
-}
+	footer {
+		background-color: rgba(245, 245, 245, 0.5);
+		font-size: 1.1rem;
+	}
+
+	footer p {
+		color: #333;
+	}
