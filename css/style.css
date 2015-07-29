@@ -112,3 +112,10 @@ main .promo-text {
 	footer p {
 		color: #333;
 	}
+
+/*fix for small screen*/	
+@media (min-width: 320px) and (max-width: 480px) {
+	main .marvel-device.nexus5 {
+		width: 280px;
+	}
+}
